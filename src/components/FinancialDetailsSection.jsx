@@ -1,16 +1,16 @@
 import ResetButton from "./ResetButton.jsx"
-import LabledDollarValue from "./LabeledDollarValue.jsx"
+import LabeledDollarValue from "./LabeledDollarValue.jsx"
 import Transactions from "./Transactions.jsx";
 import AddButton from "./AddButton.jsx";
 
 
-function FinancialDetailsSection({data}) {
+function FinancialDetailsSection({ data }) {
     return(
         <section className="financial-details">
             <h2>Your financial details</h2>
             <ResetButton/>
             <div className="nett-balance-container">
-                <LabledDollarValue label="Nett Balance" value="0"/> 
+                <LabeledDollarValue label="Nett Balance" value={0} /> 
             </div>
             <div className="financial-details-transactions">
                 <p>Transactions</p>
@@ -21,5 +21,5 @@ function FinancialDetailsSection({data}) {
             </div>
         </section>
     )
-}
-export default FinancialDetailsSection
+};
+export default FinancialDetailsSection;

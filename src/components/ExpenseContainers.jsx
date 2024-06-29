@@ -1,6 +1,6 @@
 import ExpenseContainer from "./ExpenseContainer"
 
-function ExpenseContainers({top_expenses_data}) {
+function ExpenseContainers({ top_expenses_data }) {
     return(
         <div className="expense-containers-container">
             {top_expenses_data.map(top_expense_data => (

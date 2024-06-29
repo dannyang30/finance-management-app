@@ -1,6 +1,6 @@
 import ExpenseContainers from "./ExpenseContainers"
 
-function FinancialGlanceSection({top_expenses_data}) {
+function FinancialGlanceSection({ top_expenses_data }) {
     return(
         <section>
             <h2>Finances at a Glance</h2>

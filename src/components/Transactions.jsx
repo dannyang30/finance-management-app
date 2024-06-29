@@ -1,14 +1,13 @@
-import LabledDollarValue from "./LabeledDollarValue.jsx"
-import EditButton from "./EditButton.jsx"
+import LabeledDollarValue from "./LabeledDollarValue.jsx";
+import EditButton from "./EditButton.jsx";
 
-function Transactions({data}) {
-    
+function Transactions({ data }) {    
     return(
         <ul className="transaction-list-container">
             {data.map(transaction_record => (
                 <li key={transaction_record.id} className="transaction-list">
                     <div>
-                        <LabledDollarValue label={transaction_record.transaction_category} value={transaction_record.amount}/>
+                        <LabeledDollarValue label={transaction_record.transaction_category} value={transaction_record.amount}/>
                         <span>{transaction_record.transaction_timestamp}</span>
                     </div>
                     <EditButton/>
@@ -17,7 +16,7 @@ function Transactions({data}) {
             }
         </ul>
     )
-} 
-export default Transactions
+};
+export default Transactions;
 
 

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function ExpenseContainer(props) {
     return(
         <div className="expense-container">
@@ -5,5 +7,11 @@ function ExpenseContainer(props) {
             <span>{props.topExpenseValue}</span>
         </div>
     )
-}
-export default ExpenseContainer
+};
+
+ExpenseContainer.propTypes = {
+    topExpenseCategory: PropTypes.string.isRequired,
+    topExpenseValue: PropTypes.number.isRequired,
+};
+
+export default ExpenseContainer;

@@ -6,5 +6,5 @@ function TopSection() {
             <p>Track your finances. AI Financial Advisor at your service.</p>
         </section>
     )
-}
-export default TopSection
+};
+export default TopSection;
