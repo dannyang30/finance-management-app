@@ -1,0 +1,111 @@
+body{
+  margin: 0px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: #629898;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  max-width: 480px;
+}
+
+.app-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbarDollarIcon {
+  height: 30px;
+}
+
+.resetButtonIcon {
+  height: 20px;
+}
+
+.editIcon {
+  height: 20px;
+}
+
+.addIcon {
+  height: 20px;
+}
+
+
+.reset-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+  border-radius: 5px;
+  height: 30px;
+  border-color: #CC5500;
+}
+
+.reset-button p {
+  color: #CC5500;
+}
+
+.add-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.transaction-list-container{
+  display: flex;
+  flex-direction: column;
+  border: solid #A3A1A1;
+  border-radius: 5px;
+}
+
+.transaction-list {
+  list-style-type: none ;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.financial-details-transactions ul {
+  padding: 10px;
+}
+
+.labeled-dollar-value {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 180px;
+}
+
+li {
+  padding-right: 0;
+}
+
+.nett-balance-container {
+  border: solid #A3A1A1;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.expense-containers-container {
+  display: flex;
+  flex-direction: flex-start;
+  gap:10px
+}
+
+.expense-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  border: solid #A3A1A1;
+  padding: 10px;
+}
