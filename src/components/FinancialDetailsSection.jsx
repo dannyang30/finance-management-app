@@ -7,8 +7,11 @@ import AddButton from "./AddButton.jsx";
 function FinancialDetailsSection({ data }) {
     return(
         <section className="financial-details">
-            <h2>Your financial details</h2>
-            <ResetButton/>
+            <div className="financial-details-header-button">
+                <h2>Your financial details</h2>
+                <ResetButton/>
+            </div>
+
             <div className="nett-balance-container">
                 <LabeledDollarValue label="Nett Balance" value={0} /> 
             </div>

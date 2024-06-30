@@ -1,14 +1,13 @@
 import PropTypes from 'prop-types';
 
-function LabeledDollarValue(props) {
-    
+function LabeledDollarValue(props) {    
     return(
         <div className='labeled-dollar-value'>
-            <span>{props.label}</span>
-            <span>{props.value}</span>
+            <div className='label'>{props.label}</div>
+            <div className='value'>{props.value}</div>
         </div>
     )
-}
+};
 
 LabeledDollarValue.propTypes = {
     label: PropTypes.string.isRequired,
@@ -16,4 +15,4 @@ LabeledDollarValue.propTypes = {
 };
 
 
-export default LabeledDollarValue
+export default LabeledDollarValue;

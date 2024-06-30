@@ -18,11 +18,11 @@ function App() {
   return(
     <>
       <div className="app-div">
-        <Navbar/>
-        <TopSection/>
-        <ChatbotSection/>
-        <FinancialDetailsSection data={data}/>
-        <FinancialGlanceSection top_expenses_data={top_expenses_data}/>
+          <Navbar/>
+          <TopSection/>
+          <ChatbotSection/>
+          <FinancialDetailsSection data={data}/>
+          <FinancialGlanceSection top_expenses_data={top_expenses_data}/>          
       </div>      
     </>
   )
