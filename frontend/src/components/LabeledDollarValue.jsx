@@ -8,11 +8,4 @@ function LabeledDollarValue(props) {
         </div>
     )
 };
-
-LabeledDollarValue.propTypes = {
-    label: PropTypes.string.isRequired,
-    value: PropTypes.number.isRequired,
-};
-
-
 export default LabeledDollarValue;
