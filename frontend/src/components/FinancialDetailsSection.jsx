@@ -3,14 +3,34 @@ import LabeledDollarValue from "./LabeledDollarValue.jsx"
 import Transactions from "./Transactions.jsx";
 import AddButton from "./AddButton.jsx";
 import PopUp from "./PopUp.jsx"
-import {useState} from "react"
+import {useState, useEffect} from "react"
 
 function FinancialDetailsSection({ transactions_data, fetchTransactions }) {
 
     const [isOpen, setIsOpen] = useState(false);
     const [mode, setMode] = useState(); // Store selected transaction for editing
     const [selectedTransaction, setSelectedTransaction] = useState();
+    const [nettAmount, setNettAmount] = useState();
 
+    const calculateNettAmount = (transactions_data) => {
+        let totalCredit = 0;
+        let totalDebit = 0;
+
+        transactions_data.forEach(transaction => {
+            if (transaction.transaction_type === "credit") {
+                totalCredit += transaction.amount;
+            } else {
+                totalDebit += transaction.amount;
+            }
+        });
+        return totalCredit - totalDebit;
+    }
+
+    useEffect(() => { // only run when transactions_data changes
+        const newNettAmount = calculateNettAmount(transactions_data);
+        setNettAmount(newNettAmount);
+    }, [transactions_data]);
+    
     const handleAddClick = () => {
         setIsOpen(true);
         setMode("add");
@@ -46,7 +66,7 @@ function FinancialDetailsSection({ transactions_data, fetchTransactions }) {
             </div>
 
             <div className="nett-balance-container">
-                <LabeledDollarValue label="Nett Balance" value={0}/> 
+                <LabeledDollarValue label="Nett Balance" value={nettAmount}/> 
             </div>
             <div className="financial-details-transactions">
                 <p>Transactions</p>
