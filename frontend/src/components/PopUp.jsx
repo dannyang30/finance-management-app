@@ -21,9 +21,13 @@ const credit_transaction_category_options = [
     { value: "Salary", label: "Salary"},
 ];
 
+
 function PopUp({ onClose, mode, selectedTransaction, fetchTransactions }) {
 
     const [ formData, setFormData ] = useState(selectedTransaction || {});
+
+    const category_options = (formData.transaction_type === "debit" ? debit_transaction_category_options : credit_transaction_category_options )
+   
 
     const handleInputChange = (event) => { // update formData state whenever input field changes, to be able to provide real-time feedback and ensure information is still there when user leaves the page
         setFormData({ ...formData, [event.target.name]: event.target.value }); // ... is the spread operator, which ensures the existing state isn't overwritten with just updated field value
@@ -84,14 +88,14 @@ function PopUp({ onClose, mode, selectedTransaction, fetchTransactions }) {
     const content = mode === "add" ? (
         <>
             <FormDropdownField name="transaction_type" label="Type of transaction: " options={transaction_type_options} onChange={handleInputChange}/>
-            <FormDropdownField name="transaction_category" label="Transaction category: " options={debit_transaction_category_options} onChange={handleInputChange}/>
+            <FormDropdownField name="transaction_category" label="Transaction category: " options={category_options} onChange={handleInputChange}/>
             <FormInputField label="Amount: " name="amount" type="number" placeholder="" onChange={handleInputChange}/>
             <DateField label="Transaction date: " name="transaction_date" onChange={handleInputChange}/>
         </>
     ) : (
         <>
             <FormDropdownField name="transaction_type" label="Type of transaction: " defaultValue={formData.transaction_type} options={transaction_type_options} onChange={handleInputChange}/>
-            <FormDropdownField name="transaction_category" label="Transaction category: " defaultValue={formData.transaction_category} options={debit_transaction_category_options} onChange={handleInputChange}/>
+            <FormDropdownField name="transaction_category" label="Transaction category: " defaultValue={formData.transaction_category} options={category_options} onChange={handleInputChange}/>
             <FormInputField label="Amount: " name="amount" type="number" defaultValue={formData.amount} placeholder="" onChange={handleInputChange}/>
             <DateField label="Transaction date: " name="transaction_date" defaultValue={formData.transaction_date} onChange={handleInputChange}/>
         </>
