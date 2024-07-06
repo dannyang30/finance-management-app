@@ -4,7 +4,7 @@ function LabeledDollarValue(props) {
     return(
         <div className='labeled-dollar-value'>
             <div className='label'>{props.label}</div>
-            <div className='value'>{props.value}</div>
+            <div className='value' style={props.style}>{props.value}</div>
         </div>
     )
 };
