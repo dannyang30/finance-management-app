@@ -1,9 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 .chat-row {
     display: flex;
-    margin: 5px;
     width: 100%;
+    margin-bottom: 10px;
 }
 
 .row-reverse {
     flex-direction: row-reverse;
 }
+
+.chat-bubble {
+    font-family: "Inter";
+    font-size: 16px;    
+    border-radius: 10px;
+    padding: 5px;
+    max-width: 80%;
+}
+
+.model-bubble {
+    background-color: #7bb7b7;
+    color: white;
+}
+
+.user-bubble {
+    background-color: #f0f2f6;
+    color: black;
+}
+
+.ea3mdgi5 {
+    width: auto
+
+}
+.erw9t6i1 {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* input-field */
+.e1f1d6gn3 {
+    min-width: 0;
+}
+
+/* .e1f1d6gn3 {
+    width: 100%;
+} */
+ 
+.ea3mdgi8 {
+    padding: 0;
+    height: auto;
+}
+
+.st-emotion-cache-ocqkz7 {
+    /* display: flex; */
+    /* flex-direction: row !important; */
+    gap: 0px;
+}
+
+/* .e1f1d6gn5 {
+    width: 300px;
+} */
+
+
+.e10yg2by1 { /*To remove outer container around input section */
+    border: none;
+    padding: 10px 0 10px 0;
+    /* display: flex; */
+    flex-wrap: nowrap;
+}
+
+/* Remove top padding from start of chat history section */
+.ea3mdgi5 {
+    padding-top: 0;
+}
+
+/* Hide layer covering top of chat history section */
+.ezrtsby2 {
+    visibility: hidden;
+}
+
+/*For sticky input*/
+div[data-testid="stAppViewContainer"]{ 
+    position:fixed;
+    bottom:18%;
+    padding: 10px;
+}
+
+/*For sticky input*/
+div[data-testid="stForm"]{ 
+    position:fixed;
+    right: 10%;
+    left: 10%;
+    bottom: 2%;
+    z-index: 10;
+}
+
+
+/* .ef3psqc8{
+    background-color: #CC5500;
+} */
+

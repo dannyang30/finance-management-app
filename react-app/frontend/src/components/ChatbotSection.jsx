@@ -1,8 +1,10 @@
+import ChatbotIframe from "./ChatbotIframe"
+
 function ChatbotSection() {
     return(
         <section className="chatbot-section">
             <h2>AI financial advisor</h2>
-            <div>placeholder for chatbot</div>
+            <ChatbotIframe src="http://localhost:8501" title="Chatbot" />
         </section>
     )
 }

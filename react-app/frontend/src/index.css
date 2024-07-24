@@ -165,7 +165,6 @@ li {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
 }
 
 .expense-dropdown {
@@ -178,6 +177,22 @@ li {
 
 .chatbot-section, .financial-details {
   padding-bottom: 24px;
+}
+
+.chatbot-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px; 
+  width: 100%;
+}
+
+
+
+iframe {
+  display: block;
+  margin: 0 auto;
 }
 
 section {

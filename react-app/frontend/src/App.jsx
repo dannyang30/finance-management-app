@@ -5,6 +5,7 @@ import FinancialDetailsSection from "./components/FinancialDetailsSection.jsx"
 import FinancialGlanceSection from "./components/FinancialGlanceSection.jsx"
 import { useEffect, useState } from "react"
 
+
 // const default_transactions_data = [
 //   { transaction_id: 1, transaction_timestamp: "DD-MM-YYYY", transaction_category: "Expense category 1", amount: 4 },
 //   { transaction_id: 2, transaction_timestamp: "DD-MM-YYYY", transaction_category: "Expense category 2", amount: 10 }
@@ -37,7 +38,7 @@ function App() {
           <TopSection/>
           <ChatbotSection/>
           <FinancialDetailsSection transactions_data={transactions_data} fetchTransactions={fetchTransactions}/>
-          <FinancialGlanceSection top_expenses_data={top_expenses_data}/>
+          {/* <FinancialGlanceSection top_expenses_data={top_expenses_data}/> */}
       </div>      
     </>
   )

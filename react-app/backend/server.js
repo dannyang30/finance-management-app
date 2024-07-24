@@ -16,7 +16,7 @@ const db = mysql.createConnection(
 )
 
 app.get('/transactions', (request, response) => {
-    const q = "SELECT * FROM transactions"; 
+    const q = "SELECT * FROM transactions ORDER BY transaction_date DESC"; 
 
     db.query(q, (error, data) => {
         if (error) return response.json(error);
